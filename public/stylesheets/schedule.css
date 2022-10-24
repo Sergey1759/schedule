@@ -1,0 +1,76 @@
+
+body{
+    background: rgba(15,15,15,1);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.days{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    box-sizing: border-box;
+    color: rgba(163,158,158,1);
+    font-family: "Segoe UI";
+}
+
+.days .day{
+    border-left: 1px solid rgba(202,62,71,0.4);
+    width: 14.2857142857%;
+    text-align: center;
+    -webkit-box-shadow: inset 0px 0px 12px -6px rgba(202,62,71,0.4);
+    -moz-box-shadow: inset 0px 0px 12px -6px rgba(202,62,71,0.4);
+    box-shadow: inset 0px 0px 12px -6px rgba(202,62,71,0.4);
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+.day_header{
+    position: relative;
+    height: 10%;
+}
+.hours_container{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    height: 90%;
+}
+.days .day:first-child{
+    border-left: 0px;
+}
+.day_header{
+    font-size: 20px;
+}
+.hours{
+    margin: 3px;
+    display: inline-block;
+    height: 4.16666666667%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+    text-align: left;
+    color: rgba(65, 65, 65, 0.45);
+}
+.hours:last-child{
+    border-bottom: 0px;
+}
+
+* {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
+.selected {
+    background: rgba(0, 255, 0, 0.16);
+    color: white;
+}
+.selection-rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 0, 0.27);
+    opacity: 0;
+    pointer-events: none;
+}
